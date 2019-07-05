@@ -1,0 +1,46 @@
+<?php
+include (“koneksi.php”);
+$nama   = $_POST['nama'];
+$email   = $_POST['email'];
+$username  = $_POST['username'];
+$password1  = $_POST['password'];
+$password2  = $_POST['ulangi_password'];
+if (!empty($nama)){
+if (!empty($email)){
+$sql = mysql_query(“SELECT * FROM pendaftaran WHERE email='”.$email.”‘”);
+$hasil = mysql_fetch_array($sql);
+if ($hasil['email'] != $email){
+if (!empty($username)){
+$sql = mysql_query(“SELECT * FROM pendaftaran WHERE username='”.$username.”‘”);
+$hasil = mysql_fetch_array($sql);
+if ($hasil['username'] != $username){
+if (!empty($password1)){
+if (!empty($password2)){
+if ($password1 == $password2){
+mysql_query(“INSERT INTO user VALUES(”,'”.$username.”‘,'”.$password1.”‘,'”.$nama.”‘,'”.$email.”‘)”);
+echo “Pendaftaran Sukses . . Silahkan <a href=’login.php’>login</a
+}else{
+echo “Silahkan ulangi password dengan benar”;
+}
+}else{
+echo “Anda belum mengulangi password”;
+}
+}else{
+echo “Anda belum mengisikan password”;
+}
+}else{
+echo “Username telah ada yang menggunakan”;
+}
+}else{
+echo “Anda belum mengisikan username”;
+}
+}else{
+echo “Email telah digunakan”;
+}
+}else{
+echo “Anda belum mengisikan email”;
+}
+}else{
+echo “Anda belum mengisi nama”;
+}
+?>

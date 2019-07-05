@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo "Angka Pertama"
+read angka1
+
+echo "Angka Kedua"
+read angka2
+
+let jumlah=$angka1+$angka2
+let kurang=$angka1-$angka2
+let kali=$angka1*$angka2
+
+echo "Perintah"
+read per
+
+read "Jumlah"
+echo $angka1+$angka2=$jumlah 
+
+read "Kurang"
+echo $angka1-$angka2=$kurang
+
+read "Kali"
+echo $angka1*$angka2=$kali
+
+echo "Input your first number"
+read x;
+echo "Input your second number"
+read y;
+echo "Mau di tambah/dikurang/dikali atau di bagi?"
+read tugas;
+
+let plus=$x+$y
+let min=$x-$y
+let kali=$x$y
+bagi=`expr $x / $y`
+read bagi;
+
+if [ $tugas = + ] ; then
+	echo "$x+$y=$plus"
+elif [ $tugas = - ] ; then
+	echo "$x-$y=$min"
+elif [ $tugas = * ] ; then
+	echo "$x*$y=$kali"
+elif [ $tugas = / ] ; then
+	echo "$x/$y=$bagi"
+else
+	echo "Masukan lagi"

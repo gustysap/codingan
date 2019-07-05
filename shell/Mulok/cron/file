@@ -1,0 +1,2 @@
+1 * * * * tar -czvf /home/dodipanileh/cron/data1.tar.gz /home/dodipanileh/cron/zzz
+2 * * * * rm -r /home/dodipanileh/cron/zzz

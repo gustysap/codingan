@@ -1,0 +1,5 @@
+#!/bin/bash
+hapus=`clear`;
+isi=`ls -l`;
+echo $hapus
+echo $isi;

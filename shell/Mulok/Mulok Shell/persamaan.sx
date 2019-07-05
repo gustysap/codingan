@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "input 1 ?"
+read i;
+
+echo "input 2 ?"
+read ii;
+
+`test $i == $ii`
+echo "hasil $?"

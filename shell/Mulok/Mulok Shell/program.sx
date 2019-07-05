@@ -1,0 +1,389 @@
+#!/bin/bash
+
+lagi='y'
+while [ $lagi == 'y' ] || [ $lagi == 'Y' ];
+do
+
+	key="buyer";
+	echo "Welcome In Store !! Please Insert Your Password :";
+	read pass;
+	if [ $pass == $key ]; 
+		then
+
+		plagi='y'
+		while [ $plagi == 'y' ] || [ $plagi == 'Y' ];
+		do
+			(
+                	for((loop=0; loop<=100; loop++))
+                	do
+                	echo "$loop %"
+                	sleep 0.05
+                	done
+                	) |
+                	dialog --title "[ MEMBACA DATABASE ]" \
+                	--gauge "\n Tunggu Sebentar ......" 10 60 0
+
+		clear
+			echo "|----------------------------------|";
+			echo "|         List Artist Music        |";
+			echo "|----------------------------------|";
+			echo "|1. Steven & Coconut Treez         |";
+			echo "|2. Gangstarasta                   |";
+			echo "|3. Sunset                         |";
+			echo "|4. Day Afternoon                  |";
+			echo "|5. Tony Q Rastafara               |";
+			echo "|6. Momonon                        |";
+			echo "|7. Sejedewe                       |";
+			echo "|8. Monkey Boots                   |";
+			echo "|9. Dhyo Haw                       |";
+			echo "|0. Exit                           |";
+			echo "|----------------------------------|";
+			read -p "Pilihan [1-0] :" jawab;
+
+		if [ $jawab == 1 ]; then
+			clear
+			echo "|----------------------|";
+			echo "|      List Album      |";
+			echo "|----------------------|";
+			echo "|1. First Album        |";
+			echo "|2. Second Album       |";
+			echo "|0. Exit               |";
+			echo "|----------------------|";
+			read -p "Pilihan [1-0] :" jawab;
+
+			if [ $jawab == 1 ]; then
+
+				echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+				read berapa
+				hasil=` expr $berapa \* 25000 `;
+				clear
+			elif [ $jawab == 2 ]; then
+
+				echo "Harganya Rp. 35.000, Mau Beli Berapa ? :";
+                        	read berapa
+                        	hasil=` expr $berapa \* 35000`;
+				clear
+			elif [ $jawab == 0 ]; then
+
+				exit 0
+		   	else
+				echo "Salah Ngetik Woy !!!";
+				exit 0
+		  	fi
+
+                elif [ $jawab == 2 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+				clear
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 30.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 30000`;
+				clear
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+
+                        fi
+
+                elif [ $jawab == 3 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+				clear
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 35.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 35000`;
+				clear
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+                        fi
+
+                elif [ $jawab == 4 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+				clear
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 30.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 30000`;
+				clear
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+                        fi
+
+                elif [ $jawab == 5 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+				clear
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 35.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 35000`;
+				clear
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+                        fi
+
+                elif [ $jawab == 6 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+				clear
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 30.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 30000`;
+
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+                        fi
+
+                elif [ $jawab == 7 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 35.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 35000`;
+
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+                        fi
+
+                elif [ $jawab == 8 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 30.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 30000`;
+
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+                        fi
+
+
+                elif [ $jawab == 9 ]; then
+                        clear
+                        echo "|----------------------|";
+                        echo "|      List Album      |";
+                        echo "|----------------------|";
+                        echo "|1. First Album        |";
+                        echo "|2. Second Album       |";
+                        echo "|0. Exit               |";
+                        echo "|----------------------|";
+                        read -p "Pilihan [1-0] :" jawab;
+
+                        if [ $jawab == 1 ]; then
+
+                                echo "Harganya Rp. 25.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 25000`;
+
+                        elif [ $jawab == 2 ]; then
+
+                                echo "Harganya Rp. 35.000, Mau Beli Berapa ? :";
+                                read berapa
+                                hasil=` expr $berapa \* 35000`;
+
+                        elif [ $jawab == 0 ]; then
+
+                                exit 0
+                        else
+                                echo "Salah Ngetik Woy !!!";
+                                exit 0
+                        fi
+
+
+		elif [ $jawab == 0 ]; then
+			exit 0
+		else
+			echo "Gak Ada Pilihannya Woy !!! -_-'";
+		exit 1
+
+		fi
+		echo " Total Harga = Rp. $hasil"
+
+		echo -n "Ada Uang Pas ?? (y/n) :";
+                read pas;
+
+		if [ $pas == "n" ]; then
+
+                echo "Berapa Uang Anda ? : "; 
+                read ber
+
+                modul=$(($ber-$hasil));
+                        if [ $ber -ge $hasil ]
+                        then
+				(
+				for((loop=0; loop<=100; loop++))
+				do
+				echo "$loop %"
+				sleep 0.03
+				done
+				) |
+				dialog --title "[ PROSES PEMBAYARAN SEDANG BERLANGSUNG ]" \
+				--gauge "\n Tunggu Sebentar ......" 10 60 0
+			clear
+                        echo "Kembalian Anda = Rp. $modul ";
+			echo "Thank's For Coming !!!";
+
+                        else
+                        echo "Maaf Uang Anda Kurang -_-'";
+	                fi
+		elif [ $pas == "y" ]; then
+
+			(
+			for((loop=0; loop<=100; loop++))
+			do
+			echo "$loop %"
+			sleep 0.03
+			done
+			) |
+			dialog --title "[ PROSES PEMBAYARAN SEDANG BERLANGSUNG ]" \
+			--gauge "\n Tunggu Sebentar ......" 10 60 0
+
+	clear
+	echo "Thank's For Coming ";
+	fi
+
+	echo -n "Buy Other ?? (y/n) :";
+	read plagi;
+
+	done
+		exit 0
+	else
+	echo "Wrong Password !!!";
+	fi
+
+echo -n "Input Again ?? (y/n) :";
+read lagi;
+done
+

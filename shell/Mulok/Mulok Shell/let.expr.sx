@@ -1,0 +1,14 @@
+#!/bin/bash
+#let
+
+echo -n "Angka Pertama : "
+read angka1
+echo -n "Angka Kedua : "
+read angka2
+echo -n "Perintah : "
+read perintah
+
+let jumlah=$angka1$perintah$angka2
+bagi=`expr $angka1 / $angka2`
+echo "$angka1$perintah$angka2=$jumlah"
+

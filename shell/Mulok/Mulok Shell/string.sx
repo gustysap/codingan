@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "masukan string ?"
+read ms;
+
+`test -z $ms`
+echo "hasil $?"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+lagi='y'
+while [ $lagi == 'y' ] || [ $lagi == 'Y' ];
+
+do
+echo -n "Coba Lagi ?? (y/t) : ";
+read lagi;
+done

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Masukan Logika 1 ?"
+read ml1;
+
+echo "Masukan Logika 2 ?"
+read ml2;
+
+echo "-o atau -a ?"
+read tan;
+
+`test $ml1 $tan $ml2`
+echo "Hasil $?"

@@ -1,0 +1,11 @@
+#!/bin/bash
+#subtitusi
+
+echo -n "Angka pertama : "
+read angka1
+echo -n "Angka kedua : "
+read angka2
+
+modul=$(($angka1%$angka2));
+
+echo "$angka1%$angka2=$modul"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "input nama ?"
+read in;
+
+echo "folder / file ?"
+read ff;
+
+`test $ff $in`
+echo "hasil $?"

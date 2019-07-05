@@ -1,0 +1,20 @@
+#!/bin/bash
+#kenalan
+
+echo "Nama"
+read nama
+
+echo "Kelas"
+read kelas
+
+echo "NIS"
+read nis
+
+echo "TTL"
+read ttl
+
+clear
+
+echo -e "Hi $nama\nKelas : $kelas\nNIS : $nis\nTTL : $ttl"
+
+

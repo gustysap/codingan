@@ -1,0 +1,10 @@
+#!/bin/bash
+#expr
+
+echo -n "Angka pertama : "
+read angka1
+echo -n "Angka kedua : "
+read angka2
+
+bagi=`expr $angka1 / $angka2`
+echo "$angka1/$angka2=$bagi"

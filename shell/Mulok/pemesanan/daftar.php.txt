@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>ORDER</title>
+</head>
+<body>
+<h1>Sign Up</h1>
+<form action=”hasil.php” method=”POST”>
+Nama : <br />
+<input type=”text” name=”nama” /><br />
+Email : <br />
+<input type=”text” name=”email” /><br /><br />
+Username :<br />
+<input type=”text” name=”username” /><br />
+Password :<br />
+<input type=”password” name=”password” /><br />
+Ulangi Password :<br />
+<input type=”password” name=”ulangi_password” /><br /><br />
+<input type=”submit” value=”Daftar” />
+</form>
+<p>Sudah punya akun? Silahkan <a href=”login.php”>login</a></p>
+</body>
+</html>

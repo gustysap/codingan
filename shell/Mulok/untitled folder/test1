@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nama="Dodi"
+kata="Hi $nama, apa kabarmu?"
+echo $kata;

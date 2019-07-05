@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Mau Copy apa?"
+read copy;
+
+echo "Kemana?"
+read tujuan;
+
+cp -r $copy $tujuan;
+

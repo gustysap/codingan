@@ -1,0 +1,26 @@
+#!/bin/bash
+WARNANAMA="\033[0;1;31m"
+WARNAKELAS="\033[0;1;32m"
+WARNANIS="\033[0;1;33m"
+WARNATTL="\033[0;1;34m"
+WARNATRIMS="\033[0;1;35m"
+WARNAKET="\033[0;1;36m"
+TEMPATNAMA="\033[2;1H"
+
+clear
+
+echo -e "\033[44;1;33;5m\033[1;1H Registrasi";
+echo -e "$WARNANAMA$TEMPATNAMA Your Name = ??? ";
+read nama
+
+echo -e "$WARNAKELAS Kelas";
+read kelas
+
+echo -e "$WARNANIS NIS"
+read nis
+
+echo -e "$WARNATTL TTL"
+read ttl
+
+echo -e `clear`
+echo -e "$WARNATRIMS Terima Kasih $WARNANAMA$nama \n$WARNAKELAS KELAS : $kelas \n$WARNAKET Anda Telah Bergabung Dengan Kami"
