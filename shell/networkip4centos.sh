@@ -1,8 +1,12 @@
 #!/bin/bash
 
 #Grep interface
-interface=$(nmcli dev status | awk -F ' ' '{print $1}' | grep -v '^DEVICE' | sed -e :a -e '$!N; s/\n/ | /; ta')
-typenet=$(nmcli dev status | awk -F ' ' '{print $2}' | grep -v 'TYPE' | sed -e :a -e '$!N; s/\n/ | /; ta')
+#interface=$(nmcli dev status | awk -F ' ' '{print $1}' | grep -v '^DEVICE' | sed -e :a -e '$!N; s/\n/ | /; ta')
+#awk '{ print " "$3" "$4" "$5 }'
+#virsh net-dhcp-leases default | awk '{ print " "$3" "$5" "$6 }' | sed 's/ /,/g' | sed 's/,//' | grep -v 'MAC,Protocol,IP' | grep -v ',,' >> /var/lib/libvirt/dnsmasq/default.hostsfile
+#cat file.in | awk -F"," '!($1$2$3$4$5$6$7$8 in a){a[$1$2$3$4$5$6$7$8];print $0}' > file.out
+interface=$(nmcli dev status | awk -F ' ' '{print $1}' | grep -v '^DEVICE' | nl )
+#typenet=$(nmcli dev status | awk -F ' ' '{print $2}' | grep -v 'TYPE' | sed -e :a -e '$!N; s/\n/ | /; ta')
 clear
 #Menu
 y='y'
@@ -40,9 +44,13 @@ y='y'
           echo  "Masukan connection name yang ingin dibuat ( tes | internet | gateway )"
           read -p 'con-name :    ' conname
           echo ""
-          echo  "Masukan interface namenya ( $interface )"
-          read -p 'ifname   :    ' ifname
-          typedev=nmcli dev status | grep -a enp6s0 | awk -F '  ' '{print $2}' 
+         # echo  "Masukan interface namenya ( $interface )"
+         # read -p 'ifname   :    ' ifname
+         echo "Pilihlah interface namenya   : "
+         echo "$interface"
+         echo -n "Pilih sesuai nomor ?"
+         read pilihaninterface
+          typedev=$(nmcli dev status | grep -a $ifname | awk -F '  ' '{print $2}')
           echo ""
           echo  "Masukan alamat ip nya ( 192.168.1.1/24 | 10.10.10.1/16 )"
           read -p 'ip4      :    ' ipaddress
@@ -61,17 +69,18 @@ y='y'
             nmcli con mod "${conname}" ipv4.dns $domainns
             fi
           echo ""
-            while [ $dnstambah != 'Y' ] && [ $dnstambah != 'y' ] && [ $dnstambah != 'T' ] && [ $dnstambah != 't' ];
-            do
             read -p ' Ada lagi ? ( Y/T ) :    ' dnstambah
+            while [ $dnstambah == 'Y' ] || [ $dnstambah == 'y' ]; 
+            do
             if [ $dnstambah = Y ] || [ $dnstambah = y ]; then
             read -p ' DNS ( 8.8.8.8 | 192.168.1.1 ) :   ' domainnsagain
             nmcli con mod "${conname}" +ipv4.dns $domainnsagain
+            read -p ' Ada lagi ? ( Y/T ) :   ' dnstambah
             fi
           done
 
-          while [ $autoconnection != 'yes' ] && [ $autoconnection != 'no' ];
-          do
+#          while [ $autoconnection != 'yes' ] && [ $autoconnection != 'no' ];
+#          do
           read -p 'autoconnect connection ( yes | no ) :    ' autoconnection 
           if [ $autoconnection = 'yes' ]; then 
            nmcli con mod "${conname}" connection.autoconnect yes 
@@ -79,10 +88,10 @@ y='y'
           elif [ $autoconnection = 'no' ]; then 
            nmcli con mod "${conname}" connection.autoconnect no 
           fi 
-          done 
+#         done 
           
-          while [ $activatedconn != 'up' ] && [ $activatedconn != 'down' ];  
-          do
+#         while [ $activatedconn != 'up' ] && [ $activatedconn != 'down' ];  
+#         do
           read -p  'Activated Connection ( up | down ) :    ' activatedconn 
           if [ $activatedconn = 'up' ]; then 
           nmcli con up "${conname}" 
@@ -92,8 +101,8 @@ y='y'
           nmcli con down "${conname}" 
           nmcli con show "${conname}" | grep -e 'connection.id' -e 'connection.interface-name' -e 'connection.uid' -e 'connection.type' -e 'connection.autoconnect' -e 'ipv4' -e 'GENERAL' 
           fi
-          done
-          echo  "Mau beli lagi (y/t)?"
+#         done
+          echo  "Mau ulangi program ini lagi (y/t)?"
           read y;
           while [ $y != 'y' ] && [ $y != 'Y' ] && [ $y != 't' ] && [ $y != 'T' ];
           do
