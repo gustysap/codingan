@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Grep interface
+#print except one column awk '{$1="";$0=substr($0,2)}1'
 #interface=$(nmcli dev status | awk -F ' ' '{print $1}' | grep -v '^DEVICE' | sed -e :a -e '$!N; s/\n/ | /; ta')
 #awk '{ print " "$3" "$4" "$5 }'
 #virsh net-dhcp-leases default | awk '{ print " "$3" "$5" "$6 }' | sed 's/ /,/g' | sed 's/,//' | grep -v 'MAC,Protocol,IP' | grep -v ',,' >> /var/lib/libvirt/dnsmasq/default.hostsfile
